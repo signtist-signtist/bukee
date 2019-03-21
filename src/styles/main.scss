@@ -1,0 +1,49 @@
+// @import "libs";
+// @import "helpers/variables";
+// @import "helpers/mixins";
+// @import "general/fonts";
+// @import "general/base";
+// @import "../blocks/blocks";
+
+/* Подключенные шрифты
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Slab', serif;
+*/
+
+
+
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+.page-main {
+    background-image: url("../img/page-main-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        display: block;
+        width: 140px;
+        height: 28px;
+
+        background-image: url("../img/logo.png");
+    }
+
+    &-list {
+        display: flex;
+        justify-content: flex-end;
+    
+        list-style: none;
+    
+        &__item {
+            margin-left: 25px;
+        }
+    }}
+
