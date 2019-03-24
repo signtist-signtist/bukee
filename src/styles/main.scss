@@ -13,37 +13,145 @@ font-family: 'Roboto Slab', serif;
 
 
 
+$light-color: #fff;
+$accent-color: #65e496;
+
+
+
+
 body {
+    margin: 0;
     font-family: 'Roboto Slab', serif;
+}
+
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
 }
 
 .page-main {
     background-image: url("../img/page-main-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    color: $light-color;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 37px;
+    padding-bottom: 162px;
 
     &__logo {
         display: block;
         width: 140px;
         height: 28px;
-
         background-image: url("../img/logo.png");
     }
 
     &-list {
         display: flex;
         justify-content: flex-end;
-    
         list-style: none;
+        font-family: 'Open Sans', sans-serif;
     
         &__item {
-            margin-left: 25px;
-        }
-    }}
+            margin-left: 22px;
+            padding-bottom: 3px;
+            border-bottom: 0px solid $accent-color;
+            transition: .1s;
 
+            &:hover{
+                border-bottom: 3px solid $accent-color;
+            }
+        }
+
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
+        }
+
+        &__link {
+            color: $light-color;
+            text-decoration: none;
+            letter-spacing: .5px;
+        }
+    }
+}
+
+.block-book {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 158px;
+
+    &__cover {
+        display: block;
+        background-image: url("../img/book.png");
+        background-repeat: no-repeat;
+        width: 447px;
+        height: 643px;
+        flex-basis: 500px;
+    }
+}
+
+.block-text {
+    flex-basis: calc(100% - 500px);
+    max-width: 590px; /* Видимо, временно. Из-за ширины моего монитора абзацы сужаются, и страница не совпадает с PerfectPixel */
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.75px;
+
+    &__name {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 18px;
+        letter-spacing: .9px;
+    }
+
+    &__title {
+        margin-top: -6px;
+        margin-bottom: 40px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 700;
+        font-size: 48px;
+        letter-spacing: 1.9px;
+
+        span {
+            display: block;
+            margin-top: 3px;
+            font-size: 18px;
+            font-weight: 400;
+            color: $accent-color;
+            letter-spacing: .9px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    &__btn {
+        display: block;
+        margin-top: 48px;
+        margin-bottom: 15px;
+        padding: 13px 0;
+        max-width: 250px;
+        border-radius: 3px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        color: $light-color;
+        text-align: center;
+        background-color: $accent-color;
+    }
+
+    small { 
+        font-style: italic;
+        font-size: 12px;
+        letter-spacing: .6px;
+    }
+}
