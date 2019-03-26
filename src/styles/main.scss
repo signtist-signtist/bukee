@@ -109,6 +109,11 @@ body {
         letter-spacing: .9px;
     }
 
+    &__name-top {
+        margin-top: 16px;
+        margin-bottom: 18px;
+    }
+
     &__title {
         margin-top: -6px;
         margin-bottom: 40px;
@@ -149,11 +154,21 @@ body {
         background-color: $accent-color;
     }
 
+    &__btn-narrow {
+        max-width: 238px;
+    }
+
     small { 
         font-style: italic;
         font-size: 12px;
         letter-spacing: .6px;
     }
+}
+
+.block-author {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 160px;
 }
 
 .block-ava {
@@ -162,8 +177,33 @@ body {
     &__svg {
         position: absolute;
         z-index: -1;
+        right: 0;
     }
 
     &__img {
+        margin-top: 48px;
+        margin-right: 43px;
+    }
+}
+
+.counter {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 154px;
+
+    span {
+        display: block;
+        margin-bottom: 4px;
+        text-align: center;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 100;
+        font-size: 80px;
+        color: $accent-color;
+    }
+
+    p {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
     }
 }
