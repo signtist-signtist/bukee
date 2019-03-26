@@ -155,3 +155,15 @@ body {
         letter-spacing: .6px;
     }
 }
+
+.block-ava {
+    position: relative;
+
+    &__svg {
+        position: absolute;
+        z-index: -1;
+    }
+
+    &__img {
+    }
+}
