@@ -15,6 +15,8 @@ font-family: 'Roboto Slab', serif;
 
 $light-color: #fff;
 $accent-color: #65e496;
+$bg-light-color: #f5f6fa;
+$bg-dark-color: #44444f;
 
 
 
@@ -22,6 +24,18 @@ $accent-color: #65e496;
 body {
     margin: 0;
     font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 24px;
+    letter-spacing: 1.2px;
 }
 
 .wrap {
@@ -34,6 +48,35 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: $light-color;
+}
+
+.page {
+    padding-top: 160px;
+
+    &_gray {
+        background-color: $bg-light-color;
+
+        span {
+            display: block;
+            margin-top: 23px
+            margin-bottom: 83px;;
+            font-size: 18px;
+            font-weight: 400;
+            color: $accent-color;
+            letter-spacing: .9px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 40px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 700;
+        font-size: 48px;
+        letter-spacing: 1.9px;
+
+    }
 }
 
 .header {
@@ -104,14 +147,14 @@ body {
 
     &__name {
         margin-top: 0;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         font-size: 18px;
         letter-spacing: .9px;
     }
 
-    &__name-top {
+    &__name_top {
         margin-top: 16px;
-        margin-bottom: 18px;
+        margin-bottom: 38px;
     }
 
     &__title {
@@ -124,7 +167,7 @@ body {
 
         span {
             display: block;
-            margin-top: 3px;
+            margin-top: 24px;
             font-size: 18px;
             font-weight: 400;
             color: $accent-color;
@@ -168,7 +211,6 @@ body {
 .block-author {
     display: flex;
     justify-content: space-between;
-    padding-top: 160px;
 }
 
 .block-ava {
@@ -189,7 +231,8 @@ body {
 .counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 154px;
+    margin-top: 193px;
+    margin-bottom: 182px;
 
     span {
         display: block;
@@ -205,5 +248,29 @@ body {
         text-align: center;
         font-family: 'Open Sans', sans-serif;
         font-size: 18px;
+    }
+}
+
+.block-about {
+    display: flex;
+    justify-content: space-between;
+
+    &-text {
+        flex-basis: 40%;
+    }
+
+    &-table {
+        flex-basis: 54%;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        &>li {
+            &:::before {
+                content: "+";
+            }
+        }
     }
 }
