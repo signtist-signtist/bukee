@@ -85,7 +85,7 @@ h3 {
     align-items: center;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 37px;
+    padding-top: 35px;
     padding-bottom: 162px;
 
     &__logo {
@@ -102,7 +102,7 @@ h3 {
         font-family: 'Open Sans', sans-serif;
     
         &__item {
-            margin-left: 22px;
+            margin-left: 25px;
             padding-bottom: 3px;
             border-bottom: 0px solid $accent-color;
             transition: .1s;
@@ -119,7 +119,7 @@ h3 {
         &__link {
             color: $light-color;
             text-decoration: none;
-            letter-spacing: .5px;
+            letter-spacing: .6px;
         }
     }
 }
@@ -231,12 +231,12 @@ h3 {
 .counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 193px;
-    margin-bottom: 182px;
+    margin-top: 215px;
+    margin-bottom: 158px;
 
     span {
         display: block;
-        margin-bottom: 4px;
+        margin-bottom: 45px;
         text-align: center;
         font-family: 'Roboto Slab', serif;
         font-weight: 100;
@@ -255,6 +255,11 @@ h3 {
     display: flex;
     justify-content: space-between;
 
+    p {
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: .75px;
+    }
+
     &-text {
         flex-basis: 40%;
     }
@@ -266,11 +271,32 @@ h3 {
     &__list {
         margin: 0;
         padding: 0;
+        counter-reset: list;
+        column-count: 2;
 
         &>li {
-            
+            position: relative;
+            padding-left: 40px;
+            counter-increment: list;
+            list-style-type: none;
+            line-height: 32px;
+
             &::before {
+                content: counter(list) ". ";
+            }
+
+            &::after {
+                position: absolute;
+                left: 0;
                 content: "+";
+                display: inline-block;
+                padding: 5px;
+                margin-bottom: 10px;
+                background-color: $accent-color;
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 15px;
+                color: #fff;
             }
         }
     }
