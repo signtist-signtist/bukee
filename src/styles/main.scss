@@ -39,6 +39,12 @@ h3 {
     margin-bottom: 20px;
 }
 
+h4 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+}
+
 .wrap {
     max-width: 1170px;
     margin: 0 auto;
@@ -182,11 +188,10 @@ h3 {
     }
 
     &__btn {
-        display: block;
-        margin-top: 48px;
+        display: inline-block;
+        margin-top: 25px;
         margin-bottom: 15px;
-        padding: 13px 0;
-        max-width: 250px;
+        padding: 13px 25px;
         border-radius: 3px;
         font-family: 'Roboto Slab', serif;
         font-size: 18px;
@@ -195,10 +200,6 @@ h3 {
         color: $light-color;
         text-align: center;
         background-color: $accent-color;
-    }
-
-    &__btn-narrow {
-        max-width: 238px;
     }
 
     small { 
@@ -231,7 +232,7 @@ h3 {
 .counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 215px;
+    margin-top: 212px;
     margin-bottom: 158px;
 
     span {
@@ -256,12 +257,33 @@ h3 {
     justify-content: space-between;
 
     p {
+        margin-bottom: 16px;
         font-family: 'Open Sans', sans-serif;
         letter-spacing: .75px;
     }
 
     &-text {
         flex-basis: 40%;
+    }
+
+    &__subheader {
+        display: inline-block;
+    }
+
+    &__links {
+        display: inline-block;
+        padding-left: 20px;
+        list-style-type: none;
+        letter-spacing: 6px;
+
+        &>li {
+            display: inline-block;
+            font-size: 18px;
+
+            &>a {
+                color: $accent-color;
+            }
+        }
     }
 
     &-table {
@@ -293,7 +315,7 @@ h3 {
                 content: "+";
                 display: inline-block;
                 padding: 0 7px;
-                background-color: $accent-color;
+                background-color: #5fc9b3;
                 text-align: center;
                 line-height: 22px;
                 font-family: 'Open Sans', sans-serif;
@@ -301,5 +323,11 @@ h3 {
                 color: $light-color;
             }
         }
+    }
+
+    &__btn {
+        border-style: none;
+        padding-left: 45px;
+        padding-right: 45px;
     }
 }
