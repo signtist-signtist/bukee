@@ -36,7 +36,7 @@ h1, h2, h3, h4, p {
 h3 {
     font-size: 24px;
     letter-spacing: 1.2px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 h4 {
@@ -48,6 +48,10 @@ h4 {
 .wrap {
     max-width: 1170px;
     margin: 0 auto;
+
+    &_books {
+        text-align: center;
+    }
 }
 
 .page-main {
@@ -64,25 +68,26 @@ h4 {
         padding-bottom: 240px;
         background-color: $bg-light-color;
 
-        span {
-            display: block;
-            margin-top: 23px;
-            margin-bottom: 83px;
-            font-size: 18px;
-            font-weight: 400;
-            color: $accent-color;
-            letter-spacing: .9px;
-        }
+        
     }
 
     &__title {
         text-align: center;
         margin-top: 5px;
-        margin-bottom: 40px;
+        margin-bottom: 84px;
         font-family: 'Roboto Slab', serif;
         font-weight: 700;
         font-size: 48px;
         letter-spacing: 1.9px;
+    }
+
+    span {
+        display: block;
+        margin-top: 23px;
+        font-size: 18px;
+        font-weight: 400;
+        color: $accent-color;
+        letter-spacing: .9px;
     }
 }
 
@@ -232,6 +237,12 @@ h4 {
         color: $light-color;
         text-align: center;
         background-color: $accent-color;
+
+        &_books {
+            margin-top: 83px;
+            padding: 13px 38px;
+            letter-spacing: .8px;
+        }
     }
 
     small { 
@@ -268,7 +279,7 @@ h4 {
 .counter {
     display: flex;
     justify-content: space-around;
-    margin-top: 212px;
+    margin-top: 188px;
     margin-bottom: 158px;
 
     span {
@@ -365,5 +376,56 @@ h4 {
         border-style: none;
         padding-left: 45px;
         padding-right: 45px;
+    }
+}
+
+.books {
+    display: flex;
+
+    &__cover {
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: .7px;
+            margin: 0 10px 17px 10px;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 70px;
+        left: 132px;
+        color: $light-color;
+
+        span {
+            display: block;
+            margin-top: 8px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            letter-spacing: .6px;
+        }
+    }
+
+    &__img {
+        position: relative;
+        margin-bottom: 30px;
+
+        p {
+            position: absolute;
+            bottom: 33px;
+            left: 142px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            letter-spacing: .6px;
+            color: $accent-color;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $accent-color;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
     }
 }
