@@ -255,15 +255,18 @@
 				<div class="block-author">
 
 					<div class="block-ava">
-						<svg class="block-ava__svg" width="435" height="704">
+						<svg class="block-ava__svg block-ava__svg_left" width="435" height="704">
 							<linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="435" y2="704">
-								<stop offset="0" style="stop-color: #426384"/> <!-- Эти закрывающие слэши обязательны -->
-								<stop offset="1" style="stop-color: #5acab1"/>
+								<stop offset="0" style="stop-color: #5acab1"/> <!-- Эти закрывающие слэши обязательны -->
+								<stop offset="1" style="stop-color: #426384"/>
+
+								<!-- Не смог изменить направление градиента (( -->
+
 							</linearGradient>
 							<rect width="435" height="704" x="0" y="0" fill="url(#gradient)"></rect>
 						</svg>
 
-						<img class="block-ava__img" src="../img/events-portrait.jpg" alt="">
+						<img class="block-ava__img block-ava__img_left" src="../img/events-portrait.jpg" alt="">
 					</div>
 					
 					<div class="block-text">
@@ -273,27 +276,27 @@
 						<h2 class="block-text__title">
 							Upcoming Events <span>Some upcoming events you might be interested in</span>
 						</h2>
-						<p>
+						<p class="block-text__date">
 							November 21, 2018
 						</p>
 						<h4>
 							Book signing - San francisco, CA
 						</h4>
-						<p class="block-text__description">
+						<p class="block-text__description block-text__description_events">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspen disse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
 						</p>
-						<a href="" class="block-text__btn">Register</a>
+						<a href="" class="block-text__btn block-text__btn_events">Register</a>
 
-						<p>
+						<p class="block-text__date">
 							November 21, 2018
 						</p>
 						<h4>
 							Book reading - Los Angeles, CA
 						</h4>
-						<p class="block-text__description">
+						<p class="block-text__description block-text__description_events">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspen disse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. 
 						</p>
-						<a href="" class="block-text__btn">Register</a>
+						<a href="" class="block-text__btn block-text__btn_events">Register</a>
 					</div>
 
 				</div>
