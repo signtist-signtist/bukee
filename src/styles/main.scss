@@ -48,6 +48,12 @@ h4 {
     letter-spacing: 0.9px;
 }
 
+em {
+    font-family: 'Roboto Slab', serif;
+    font-style: normal;
+    color: $accent-color;
+}
+
 .wrap {
     max-width: 1170px;
     margin: 0 auto;
@@ -459,5 +465,21 @@ h4 {
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
         letter-spacing: 1px;
+    }
+}
+
+.blog {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+        margin: 0 15px;
+        text-align: left;
+    }
+
+    &__img {
+        width: 369px;
+        height: 224px;
+        margin-bottom: 16px;
     }
 }
