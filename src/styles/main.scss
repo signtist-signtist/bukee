@@ -49,7 +49,7 @@ h4 {
 }
 
 em {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Open Sans', sans-serif;
     font-style: normal;
     color: $accent-color;
 }
@@ -75,6 +75,11 @@ em {
 
     &_gray {
         padding-bottom: 240px;
+        background-color: $bg-light-color;
+    }
+
+    &_blog {
+        padding-bottom: 145px;
         background-color: $bg-light-color;
     }
 
@@ -265,6 +270,10 @@ em {
             margin-bottom: 54px;
             margin-top: 0;
             padding: 13px 31px;
+        }
+
+        &_blog {
+            padding: 13px 40px;
         }
     }
 
@@ -471,6 +480,7 @@ em {
 .blog {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
 
     &__item {
         margin: 0 15px;
@@ -481,5 +491,20 @@ em {
         width: 369px;
         height: 224px;
         margin-bottom: 16px;
+    }
+
+    &__article-title {
+        margin-bottom: 2px;
+    }
+
+    &__sign {
+        margin-bottom: 12px;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: .75px;
+    }
+
+    & p {
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: .75px;
     }
 }
