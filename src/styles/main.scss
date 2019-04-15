@@ -84,6 +84,10 @@ em {
         background-color: $bg-light-color;
     }
 
+    &_dark {
+        background-color: $bg-dark-color;
+    }
+
     &__title {
         text-align: center;
         margin-top: 5px;
@@ -630,6 +634,40 @@ em {
     }
 
     &__social-link {
+        color: $accent-color;
+    }
+}
+
+.block-slider {
+    text-align: center;
+    color: $gray-text;
+
+    &__ava {
+        position: relative;
+        margin: 0 auto;
+        border-radius: 50%;
+
+        // &::before {
+        //     content: ('"a');
+        //     position: absolute;
+        //     right: 5px;
+        //     z-index: 2;
+        //     font-family: 'Roboto Slab', serif;
+        //     font-size: 48px;
+        //     color: $accent-color;
+        // }
+    }
+
+    &__decor {
+        position: absolute;
+        z-index: 2;
+        right: 25px;
+        font-family: 'Roboto Slab', serif;
+        font-size: 48px;
+        color: $accent-color;
+    }
+
+    & h4 {
         color: $accent-color;
     }
 }
