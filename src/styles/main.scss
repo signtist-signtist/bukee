@@ -58,6 +58,8 @@ em {
 .wrap {
     max-width: 1170px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
     &_books {
         text-align: center;
@@ -97,6 +99,7 @@ em {
         position: absolute;
         top: 0;
         width: 100%;
+        min-height: 700px;
         z-index: -1;
     }
 
@@ -126,13 +129,16 @@ em {
 }
 
 .header {
+    @media(max-width: 950px) {
+        flex-direction: column;
+    }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1170px;
     margin: 0 auto;
-    padding-top: 35px;
-    padding-bottom: 162px;
+    padding: 35px 15px 162px 15px;
 
     &__logo {
         display: block;
@@ -217,6 +223,10 @@ em {
 }
 
 .block-text {
+    @media(max-width: 1020px) {
+        flex-basis: calc(100% - 315px);
+    }
+
     flex-basis: calc(100% - 500px);
     max-width: 590px; /* Видимо, временно. Из-за ширины моего монитора абзацы сужаются, и страница не совпадает с PerfectPixel */
     font-family: 'Open Sans', sans-serif;
@@ -224,29 +234,31 @@ em {
 
     &__name {
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 37px;
         font-size: 18px;
         letter-spacing: .9px;
     }
 
     &__name_top {
         margin-top: 16px;
-        margin-bottom: 38px;
+        margin-bottom: 26px;
     }
 
     &__title {
         margin-top: -6px;
-        margin-bottom: 40px;
+        margin-bottom: 36px;
         font-family: 'Roboto Slab', serif;
         font-weight: 700;
         font-size: 48px;
+        line-height: 48px;
         letter-spacing: 1.9px;
 
         span {
             display: block;
-            margin-top: 24px;
+            margin-top: 13px;
             font-size: 18px;
             font-weight: 400;
+            line-height: 25px;
             color: $accent-color;
             letter-spacing: .9px;
         }
@@ -324,6 +336,11 @@ em {
     position: relative;
 
     &__svg {
+        @media(max-width: 1020px) {
+            width: 300px;
+            height: 412px;
+        }
+    
         position: absolute;
         z-index: -1;
         right: 0;
@@ -336,6 +353,10 @@ em {
     }
 
     &__img {
+        @media(max-width: 1020px) {
+            width: 300px;
+        }
+    
         margin-top: 48px;
         margin-right: 43px;
 
@@ -347,10 +368,14 @@ em {
 }
 
 .counter {
+    @media(max-width: 750px) {
+        flex-direction: column;
+    }
+    
     display: flex;
     justify-content: space-around;
     margin-top: 188px;
-    margin-bottom: 158px;
+    margin-bottom: 110px;
 
     span {
         display: block;
@@ -363,6 +388,7 @@ em {
     }
 
     p {
+        margin-bottom: 50px;
         text-align: center;
         font-family: 'Open Sans', sans-serif;
         font-size: 18px;
@@ -380,7 +406,8 @@ em {
     }
 
     &-text {
-        flex-basis: 40%;
+        flex-basis: calc(100% - 690px);
+        margin-right: 25px;
     }
 
     &__subheader {
@@ -404,7 +431,7 @@ em {
     }
 
     &-table {
-        flex-basis: 50%;
+        flex-basis: 570px;
     }
 
     &__list {
@@ -412,6 +439,7 @@ em {
         padding: 0;
         counter-reset: list;
         column-count: 2;
+        column-gap: 15px;
         font-family: 'Open Sans', sans-serif;
         letter-spacing: .75px;
 
