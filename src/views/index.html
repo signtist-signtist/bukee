@@ -155,7 +155,19 @@
 							<li>Consectetur adipisicing elit</li>
 							<li>Labore et dolore magna</li>
 						</ol>
-						<button class="block-text__btn block-about__btn">More</button>
+						<ol id="spoilerContent" class="block-about__list block-about__list_hidden" style="display: none">
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipisicing elit</li>
+							<li>Labore et dolore magna</li>
+							<li>Consectetur adipisicing elit</li>
+							<li>Labore et dolore magna</li>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipisicing elit</li>
+							<li>Labore et dolore magna</li>
+							<li>Consectetur adipisicing elit</li>
+							<li>Labore et dolore magna</li>
+						</ol>
+						<button id="spoiler" class="block-text__btn block-about__btn">More</button>
 					</div>
 				</div>
 			</div>
@@ -527,6 +539,11 @@
 					dots: true,
 					arrows: false,
 				});
+			});
+
+			$("#spoiler").click(function(){
+  			$("#spoilerContent").fadeIn();
+			$("#spoiler").hide();
 			});
 		</script>
 	</body>

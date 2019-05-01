@@ -185,11 +185,20 @@ em {
 }
 
 .block-book {
+    @media (max-width: 1020px) {
+        flex-direction: column-reverse;
+    }
+
     display: flex;
     justify-content: flex-start;
     padding-bottom: 158px;
 
     &-cover {
+        @media (max-width: 1020px) {
+            margin-top: 50px;
+            flex-basis: 100%;
+        }
+
         display: block;
         position: relative;
         background-image: url("../img/book.png");
@@ -202,7 +211,7 @@ em {
             top: 120px;
             letter-spacing: 1.3px;
             position: absolute;
-            left: calc(50% - 120px);
+            left: 30%;
             font-weight: 700;
             font-size: 36px;
             color: $light-color;
@@ -336,6 +345,10 @@ em {
 }
 
 .block-author {
+    @media (max-width: 750px) {
+        flex-direction: column-reverse;
+    }
+    
     display: flex;
     justify-content: space-between;
     margin-bottom: 135px;
@@ -357,7 +370,7 @@ em {
         &_left {
             right: inherit;
             top: 19px;
-            left: -20px;
+            left: 0;
         }
     }
 
@@ -370,7 +383,7 @@ em {
         margin-right: 43px;
 
         &_left {
-            margin-left: 31px;
+            margin-left: 48px;
             margin-top: 68px;   
         }
     }
@@ -468,6 +481,22 @@ em {
         font-family: 'Open Sans', sans-serif;
         letter-spacing: .75px;
 
+        &_hidden {
+            position: relative;
+            counter-reset: list 10;
+
+            &::before {
+                content: ' ';
+                display: block;
+                position: absolute;
+                top: -17px;
+                left: 0;
+                width: 200px;
+                height: 2px;
+                background-color: #5fc9b3;
+            }
+        }
+
         &>li {
             position: relative;
             margin-bottom: 8px;
@@ -515,8 +544,11 @@ em {
 
 .books {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 1170px;
 
     &__cover {
+        flex-basis: 32%;
 
         p {
             font-family: 'Open Sans', sans-serif;
@@ -526,9 +558,10 @@ em {
     }
 
     &__title {
-        position: absolute;
-        top: 70px;
-        left: 132px;
+        display: inline-block;
+        position: relative;
+        top: 140px;
+        left: 30px;
         color: $light-color;
 
         span {
@@ -542,7 +575,8 @@ em {
 
     &__img {
         position: relative;
-        margin-bottom: 30px;
+        margin: 0 10px 30px;
+        text-align: center;
 
         p {
             position: absolute;
@@ -561,6 +595,12 @@ em {
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
         letter-spacing: 1px;
+        border-bottom: 0px solid $accent-color;
+        transition: .1s;
+
+        &:hover {
+            border-bottom: 3px solid $accent-color;
+        }
     }
 }
 
@@ -682,13 +722,14 @@ em {
     }
 
     &__column {
-        flex-basis: 42%;
 
         & img {
             margin-bottom: 20px;
         }
 
         &_1 {
+            flex-basis: 42%;
+            margin-right: 60px;
 
             & p {
                 margin-bottom: 24px;
@@ -696,12 +737,12 @@ em {
         }
 
         &_2 {
-            margin-left: 67px;
-            flex-basis: 20%;
+            flex-basis: 25%;
+            margin-right: 60px;
+        }
 
-            & h4 {
-                margin-top: 10px;
-            }
+        &_3 {
+            flex-basis: 25%;
         }
     }
 
@@ -727,6 +768,7 @@ em {
     }
 
     &__social-link {
+        margin-right: 10px;
         color: $accent-color;
     }
 }
