@@ -156,6 +156,15 @@ em {
     }
 
     &-list {
+        @media (max-width: 950px) {
+            margin-left: -25px;
+            padding-left: 0;
+        }
+
+        @media (max-width: 750px) {
+            display: block;
+        }
+
         display: flex;
         justify-content: flex-end;
         list-style: none;
@@ -361,6 +370,7 @@ em {
         @media(max-width: 1020px) {
             width: 300px;
             height: 412px;
+            left: 50px;
         }
     
         position: absolute;
@@ -377,13 +387,19 @@ em {
     &__img {
         @media(max-width: 1020px) {
             width: 300px;
+            margin-bottom: 75px;
         }
     
         margin-top: 48px;
         margin-right: 43px;
 
         &_left {
+            @media(max-width: 1020px) {
+                margin-left: 0;
+            }
+
             margin-left: 48px;
+            margin-right: 80px;
             margin-top: 68px;   
         }
     }
@@ -473,6 +489,10 @@ em {
     }
 
     &__list {
+        @media (max-width: 750px) {
+            column-count: 1;
+        }
+
         margin: 25px 0 0 0;
         padding: 0;
         counter-reset: list;
